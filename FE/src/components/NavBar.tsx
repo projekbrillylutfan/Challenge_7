@@ -27,7 +27,6 @@ export default function NavBar({
     username = decodedToken.username;
   
     // Sekarang, variable `username` berisi nilai username yang ada dalam token JWT
-    console.log(username);
   } else {
     console.error('Token is null'); // Handle ketika token null
   }

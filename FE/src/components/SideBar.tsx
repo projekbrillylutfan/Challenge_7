@@ -21,12 +21,6 @@ export default function SideBar({ isOpen, toggleSidebar }: SidebarProps) {
           >
             Dashboard
           </Link>
-          <Link
-            to={"/dashboard"}
-            className=" h-10 w-full hover:bg-indigo-200 font-bold text-sm py-3 pl-6"
-          >
-            Dashboard
-          </Link>
         </>
       ) : (
         <>
@@ -35,12 +29,6 @@ export default function SideBar({ isOpen, toggleSidebar }: SidebarProps) {
             className=" h-10 w-full hover:bg-indigo-200 mt-5 font-bold text-sm py-3 pl-6"
           >
             CARS
-          </Link>
-          <Link
-            to={"/home"}
-            className=" h-10 w-full hover:bg-indigo-200 font-bold text-sm py-3 pl-6"
-          >
-            List Car
           </Link>
         </>
       )}
