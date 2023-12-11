@@ -17,7 +17,20 @@ export default function NavBar({
   isLoggedIn,
   onLogout,
 }: NavbarProps) {
-  const email = localStorage.getItem("email");
+  const jwt = localStorage.getItem("access_token");
+  let username = '';
+  if (jwt !== null) {
+    // Decode token menggunakan library JWT atau fungsi JSON.parse
+    const decodedToken = JSON.parse(atob(jwt.split('.')[1]));
+  
+    // Dapatkan nilai username dari token dan simpan ke variabel global
+    username = decodedToken.username;
+  
+    // Sekarang, variable `username` berisi nilai username yang ada dalam token JWT
+    console.log(username);
+  } else {
+    console.error('Token is null'); // Handle ketika token null
+  }
   return (
     <div className="navbar flex  shadow items-center p-4 relative h-[70px] min-h-max ">
       <div className="flex justify-around w-1/6 md:justify-between ">
@@ -58,7 +71,7 @@ export default function NavBar({
               inline
               renderTrigger={() => (
                 <span>
-                  {email || "who am i"}
+                  <strong>{ username || "who am i"}</strong>
                   <ChevronDownIcon className=" h-5 w-5 text-black bg-white absolute top-6 right-6  " />
                 </span>
               )}

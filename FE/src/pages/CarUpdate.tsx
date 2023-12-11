@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Sidenav from "../components/SideNav";
 import Navbar from "../components/NavBar";
 import Sidebar from "../components/SideBar";
+import { Select } from "antd";
 
 
 const cars_api_base_url: string = "http://localhost:8080";
@@ -96,16 +97,26 @@ export default function CarUpdate() {
                     </label>
                   </div>
                   <div className="md:w-2/3">
-                    <input
-                      className="appearance-none border-[1px] border-black rounded  py-2 px-3 text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px]"
-                      id="inline-full-name"
-                      type="text"
-                      value={car_size}
-                      onChange={({ target }) => {
-                        setCarSize(target.value);
-                      }}
-                      placeholder="Enter car size"
-                    />
+                  <Select
+                      id="size"
+                      className="appearance-none border-[1px] border-black rounded   text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px] h-[38px]"
+                      value={car_size || "Enter Car Size"}
+                      options={[
+                        {
+                          value: "Small",
+                          label: "Small",
+                        },
+                        {
+                          value: "Medium",
+                          label: "Medium",
+                        },
+                        {
+                          value: "Large",
+                          label: "Large",
+                        },
+                      ]}
+                      onChange={(value) => setCarSize(value)}
+                    ></Select>
                   </div>
                 </div>
 
@@ -119,16 +130,38 @@ export default function CarUpdate() {
                     </label>
                   </div>
                   <div className="md:w-2/3">
-                    <input
-                      className="appearance-none border-[1px] border-black rounded  py-2 px-3 text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px]"
-                      id="inline-full-name"
-                      type="number"
-                      value={car_categories}
-                      onChange={({ target }) => {
-                        setCarCategories(target.value);
-                      }}
-                      placeholder="Enter rent per day"
-                    />
+                  <Select
+                      id="size"
+                      className="appearance-none border-[1px] border-black rounded   text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px] h-[38px]"
+                      value={car_categories || "Enter Car Categories"}
+                      options={[
+                        {
+                            value: "Sedan",
+                            label: "Sedan",
+                          },
+                          {
+                            value: "Hatchback",
+                            label: "Hatchback",
+                          },
+                          {
+                            value: "SUV",
+                            label: "SUV",
+                          },
+                          {
+                            value: "MPV",
+                            label: "MPV",
+                          },
+                          {
+                            value: "Coupe",
+                            label: "Coupe",
+                          },
+                          {
+                            value: "Convertible",
+                            label: "Convertible",
+                          },
+                      ]}
+                      onChange={(value) => setCarCategories(value)}
+                    ></Select>
                   </div>
                 </div>
 
@@ -142,16 +175,22 @@ export default function CarUpdate() {
                     </label>
                   </div>
                   <div className="md:w-2/3">
-                    <input
-                      className="appearance-none border-[1px] border-black rounded  py-2 px-3 text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px]"
-                      id="inline-full-name"
-                      type="number"
-                      value={status_rental}
-                      onChange={({ target }) => {
-                        setStatusRental(target.value);
-                      }}
-                      placeholder="Enter rent per day"
-                    />
+                  <Select
+                      id="size"
+                      className="appearance-none border-[1px] border-black rounded   text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px] h-[38px]"
+                      value={status_rental || "Enter Car Status Rental"}
+                      options={[
+                        {
+                            value: "ready",
+                            label: "Ready",
+                          },
+                          {
+                            value: "not",
+                            label: "Not Ready",
+                          },
+                      ]}
+                      onChange={(value) => setStatusRental(value)}
+                    ></Select>
                   </div>
                 </div>
 

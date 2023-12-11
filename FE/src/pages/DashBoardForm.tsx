@@ -165,8 +165,17 @@ export default function DashBoardForm() {
                         >
                           Create by
                         </th>
-                        <th scope="col" className="relative px-6 py-3">
-                          <span className="sr-only">Edit</span>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Edit
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Delete
                         </th>
                       </tr>
                     </thead>
@@ -195,7 +204,7 @@ export default function DashBoardForm() {
                             <div className="flex items-left">
                               <div>
                                 <div className="text-sm font-medium text-gray-900">
-                                  {car.status_rental}
+                                  {car.car_categories}
                                 </div>
                               </div>
                             </div>
@@ -204,7 +213,7 @@ export default function DashBoardForm() {
                             <div className="flex items-left">
                               <div>
                                 <div className="text-sm font-medium text-gray-900">
-                                  {car.car_categories}
+                                  {car.status_rental}
                                 </div>
                               </div>
                             </div>
@@ -227,6 +236,8 @@ export default function DashBoardForm() {
                                 Edit
                               </Link>
                             </button>
+                          </td>
+                          <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                             <button
                               className="text-red-500 hover:text-red-700"
                               onClick={() => deleteCar(car.id)}

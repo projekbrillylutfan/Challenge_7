@@ -104,7 +104,7 @@ export default function CarCreate() {
                     <Select
                       id="size"
                       className="appearance-none border-[1px] border-black rounded   text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px] h-[38px]"
-                      value={car_categories || "Enter Car Size"}
+                      value={car_categories || "Enter Car Categories"}
                       options={[
                         {
                             value: "Sedan",
@@ -182,7 +182,7 @@ export default function CarCreate() {
                     <Select
                       id="size"
                       className="appearance-none border-[1px] border-black rounded   text-black leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-[315px] h-[38px]"
-                      value={status_rental || "Enter Car Size"}
+                      value={status_rental || "Enter Car Status Rental"}
                       options={[
                         {
                             value: "ready",
