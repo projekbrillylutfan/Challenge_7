@@ -25,10 +25,16 @@ export default function SideBar({ isOpen, toggleSidebar }: SidebarProps) {
       ) : (
         <>
           <Link
-            to={"/home"}
+            to={"/Home"}
             className=" h-10 w-full hover:bg-indigo-200 mt-5 font-bold text-sm py-3 pl-6"
           >
-            CARS
+            Cars List
+          </Link>
+          <Link
+            to={"/car-status"}
+            className=" h-10 w-full hover:bg-indigo-200 mt-5 font-bold text-sm py-3 pl-6"
+          >
+            Cars Status
           </Link>
         </>
       )}

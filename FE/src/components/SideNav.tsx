@@ -17,7 +17,7 @@ export default function SideNav() {
         Dashboard
       </Link>
       <Link
-        to="/home"
+        to="/Home"
         className="grid text-white w-full py-3 hover:bg-indigo-200 justify-center font-light text-xs content-center"
       >
         <div className="grid justify-center">
